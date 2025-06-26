@@ -218,6 +218,8 @@ header nav ul li .language-select{
 
 /* home section */
 .home {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/actc/images/background.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
