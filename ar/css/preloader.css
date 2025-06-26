@@ -1,0 +1,24 @@
+:root{
+    --main-background-color: #fcfcff;
+    --first-text-color: #2050af;
+    --second-text-color: #1c51e5;
+}
+
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        background-color: var(--main-background-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+        #preloader img {
+            height: 7rem;
+        }
+    }

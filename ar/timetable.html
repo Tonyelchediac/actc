@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- website favicon and title-->
+    <link rel="shortcut icon" href="images/logo removed-bg.png" type="image/x-icon">
+    <title>A.C.T.C | Time Table</title>
+    <!-- security headers -->
+    <!-- <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="Information about Lebanese public transportation.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self';">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="no-referrer">
+    <meta name="X-XSS-Protection" content="1; mode=block"> -->
+    <!-- styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/timetable.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- javascript -->
+    <script src="js/script.js" defer></script>
+    <script src="js/timetable.js" defer></script>
+    <script src="js/header&footer.js"></script>
+
+    <style>
+        #home {
+            min-height: 50dvh;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="img">
+            <img src="images/preloader.gif" alt="preloader">
+        </div>
+    </div>
+
+    <!-- scroll to top button -->
+    <button id="scrollToTopBtn" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- header -->
+    <header id="header">
+        <div class="logo">
+            <img src="images/logo removed-bg.png" alt="logo">
+        </div>
+        <nav>
+        </nav>
+
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- home -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="home-image">
+                <img src="images/ministry logo.jpg" alt="Bus Illustration">
+            </div>
+            <h1>Stations Time Table</h1>
+        </div>
+        <div class="home-news">
+            <p>Breaking News:</p>
+            <marquee id="news-marquee" behavior="scroll" direction="left">Loading news...</marquee>
+        </div>
+    </section>
+
+    <!-- routes -->
+    <section id="routes">
+        <div class="container">
+            <h1 class="section-title">Bus Station Timetable</h1>
+            <p class="section-description">Select a route to view its timetable.<br><strong style="color: #1c51e5;">Note:</strong> The bus times are approximate and may not be 100% accurate; they indicate when each bus is expected at the station.</p>
+            <div id="route-buttons"></div>
+
+            <!-- Search Box -->
+            <div id="search-box">
+                <input type="text" id="searchInput" placeholder="Search for a stop like Batroun..." />
+            </div>
+
+            <div id="output" class="schedule"></div>
+
+            <!-- Direction Alert -->
+            <div id="directionAlert">
+                <button class="close-button" onclick="hideDirectionAlert()"><i class="fa-solid fa-xmark"></i></button>
+                <div id="directionAlertContent">
+                    <h3>Select ML4 Direction</h3>
+                    <button onclick="handleDirection('BT')">B to T</button>
+                    <button onclick="handleDirection('TB')">T to B</button>
+                </div>
+            </div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer></footer>
+
+</body>
+
+</html>

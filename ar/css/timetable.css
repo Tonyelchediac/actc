@@ -1,0 +1,140 @@
+:root {
+  --main-background-color: #fcfcff;
+  --second-background-color: #f0f2f5;
+  --first-text-color: #2050af;
+  --second-text-color: #1c51e5;
+  --third-text-color: #ffffff;
+  --first-font-size: 1.2rem;
+}    
+    
+#route-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 10px;
+  margin-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+#search-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#search-box input {
+  padding: 10px;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.schedule {
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.schedule h2 {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.bus-block {
+  margin-bottom: 30px;
+}
+
+.bus-block strong {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: var(--first-text-color);
+}
+
+.station {
+  margin-left: 20px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#directionAlert {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+#directionAlertContent {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#directionAlertContent h3 {
+  margin-bottom: 20px;
+}
+
+#directionAlert .close-button {
+  background-color: var(--main-background-color);
+  color: var(--second-text-color);
+  font-size: var(--first-font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  border-radius: 50%;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  #route-buttons {
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+
+  #search-box input {
+    width: 100%;
+  }
+
+  .schedule {
+    padding: 15px 20px;
+    font-size: 0.9rem;
+  }
+
+  .bus-block strong {
+    font-size: 1rem;
+  }
+
+  .station {
+    font-size: 0.9rem;
+    gap: 5px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- website favicon and title-->
+    <link rel="shortcut icon" href="images/logo removed-bg.png" type="image/x-icon">
+    <title>A.C.T.C | Complaint</title>
+    <!-- security headers -->
+    <!-- <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="Information about Lebanese public transportation.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self';">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="no-referrer">
+    <meta name="X-XSS-Protection" content="1; mode=block"> -->
+    <!-- styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- javascript -->
+    <script src="js/script.js" defer></script>
+    <script src="js/header&footer.js"></script>
+
+    <style>
+        #home{
+            min-height: 50dvh;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="img">
+            <img src="images/preloader.gif" alt="preloader">
+        </div>
+    </div>
+
+    <!-- scroll to top button -->
+    <button id="scrollToTopBtn" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- header -->
+    <header id="header">
+        <div class="logo">
+            <img src="images/logo removed-bg.png" alt="logo">
+        </div>
+        <nav>
+        </nav>
+
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- home -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="home-image">
+                <img src="images/ministry logo.jpg" alt="Bus Illustration">
+            </div>
+            <h1>Complaint</h1>
+        </div>
+        <div class="home-news">
+            <p>Breaking News:</p>
+            <marquee id="news-marquee" behavior="scroll" direction="left">Loading news...</marquee>
+        </div>
+    </section>
+
+    <!-- complaint section -->
+    <section id="complaint-section">
+        <div class="container">
+            <h2 class="section-title">Submit a Complaint</h2>
+            <p class="section-description">We value your feedback and are committed to providing excellent service. If you have any concerns or suggestions, please feel free to submit a complaint using the form below. Your input is important to us, and we will address your concerns promptly.</p>
+            <form class="complaint-form" id="complaintForm">
+                <label for="name">Your Name (optional)</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+                <label for="type">Complaint Type</label>
+                <select id="type" name="type" required>
+                    <option value="">Select type</option>
+                    <option value="service">Service</option>
+                    <option value="driver">Driver</option>
+                    <option value="bus">Bus</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="message">Complaint Details</label>
+                <textarea id="message" name="message" rows="5" placeholder="Describe your complaint" required></textarea>
+
+                <div class="checkbox">
+                    <input type="checkbox" name="trust" id="ticketTrust" required>
+                    <p>i pledge that all Information entered is 100% correct.</p>
+                </div>
+
+                <button type="submit">Submit Complaint</button>
+                <div class="success-message" id="successMessage" style="display:none;">
+                    Thank you for your feedback. We will review your complaint as soon as possible.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer></footer>
+
+    <script>
+        document.getElementById('complaintForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Simulate successful submission
+            document.getElementById('successMessage').style.display = 'block';
+            this.reset();
+        });
+    </script>
+</body>
+</html>
